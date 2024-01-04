@@ -1,7 +1,11 @@
-# Running the Program:
+# Compiling the Program:
 
 ```sh
-cd src &&
-g++ -o main.out main.cpp ChessBoard.cpp &&
-./main.out
+cmake -B build &&
+make -C build
+```
+
+# Running the Program:
+```sh
+./bin/main.out
 ```
