@@ -1,14 +1,21 @@
-#include "ChessBoard.h"
 #include <iostream>
 
+#include "ChessBoard.h"
+#include "Square.h"
+
 ChessBoard::ChessBoard() {
-    std::cout << "Constructing!" << std::endl;
+
 }
 
 void ChessBoard::initializeBoard() {
-    std::cout << "Initializing!" << std::endl;
+    
 }
 
 void ChessBoard::displayBoard() {
-    std::cout << "Displaying!" << std::endl;
+    for (const auto &row : squares) {
+        for (const Square &square : row) {
+            std::cout << square << ' ';
+        }
+        std::cout << std::endl;
+    }
 }

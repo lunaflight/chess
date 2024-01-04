@@ -1,6 +1,10 @@
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
 
+#include <array>
+
+#include "Square.h"
+
 class ChessBoard {
 public:
     ChessBoard();
@@ -8,7 +12,7 @@ public:
     void displayBoard();
 
 private:
-    // Add necessary member variables and functions
+    std::array<std::array<Square, 8>, 8> squares;
 };
 
 #endif

@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 # Add the source files
 set(SOURCE_FILES
     src/ChessBoard.cpp
+    src/Square.cpp
     src/main.cpp
 )
 
