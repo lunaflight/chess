@@ -17,5 +17,5 @@ bool Knight::canMoveTo(std::shared_ptr<Square> square) {
 }
 
 std::string Knight::toString() {
-    return "K";
+    return "N";
 }
