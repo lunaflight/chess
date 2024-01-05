@@ -9,11 +9,12 @@ class Square;
 
 class Piece {
 public:
+    Piece(std::shared_ptr<Square> square);
     virtual std::vector<std::shared_ptr<Square>> getValidMoves() = 0;
 
     friend std::ostream& operator<<(std::ostream& os, const Piece& piece);
-private:
-
+protected:
+    std::shared_ptr<Square> square;
 };
 
 #endif
