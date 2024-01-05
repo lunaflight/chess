@@ -2,6 +2,7 @@
 #define SQUARE_H
 
 #include <memory>
+#include <string>
 
 class Piece;
 
@@ -13,7 +14,7 @@ public:
 
     void placePiece(std::shared_ptr<Piece> piece);
 
-    friend std::ostream& operator<<(std::ostream& os, const Square& square);
+    std::string toString();
 private:
     std::shared_ptr<Piece> piece;
     int row;

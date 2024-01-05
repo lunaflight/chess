@@ -25,7 +25,7 @@ std::shared_ptr<Square> ChessBoard::getSquare(int row, int col) {
 void ChessBoard::displayBoard() {
     for (const auto &row : squares) {
         for (const std::shared_ptr<Square> &square : row) {
-            std::cout << *square << ' ';
+            std::cout << square->toString() << ' ';
         }
         std::cout << std::endl;
     }

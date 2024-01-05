@@ -1,5 +1,7 @@
 #include <iostream>
 #include <memory>
+#include <sstream>
+#include <string>
 
 #include "Square.h"
 #include "pieces/Piece.h"
@@ -18,12 +20,14 @@ void Square::placePiece(std::shared_ptr<Piece> piece) {
     this->piece = piece;
 }
 
-std::ostream& operator<<(std::ostream& os, const Square& square) {
-    if (square.piece) {
-        os << square.piece->toString();
+std::string Square::toString() {
+    std::stringstream ss;
+
+    if (this->piece) {
+        ss << this->piece->toString();
     } else {
-        os << "X";
+        ss << "X";
     }
-    os << " (" << square.row << ", " << square.col << ")";
-    return os;
+    ss << " (" << this->row << ", " << this->col << ")";
+    return ss.str();
 }
