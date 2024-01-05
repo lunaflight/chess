@@ -5,12 +5,12 @@
 #include <string>
 #include <vector>
 
-class Square;
+#include "../Square.h"
 
 class Piece {
 public:
     Piece(std::shared_ptr<Square> square);
-    virtual std::vector<std::shared_ptr<Square>> getValidMoves() = 0;
+    virtual bool canMoveTo(std::shared_ptr<Square> square) = 0;
 
     friend std::ostream& operator<<(std::ostream& os, const Piece& piece);
 protected:

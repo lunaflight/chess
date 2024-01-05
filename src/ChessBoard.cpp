@@ -16,6 +16,10 @@ void ChessBoard::initializeBoard() {
     
 }
 
+std::shared_ptr<Square> ChessBoard::getSquare(int row, int col) {
+    return squares[row][col];
+}
+
 void ChessBoard::displayBoard() {
     for (const auto &row : squares) {
         for (const std::shared_ptr<Square> &square : row) {

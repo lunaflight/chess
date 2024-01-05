@@ -9,6 +9,9 @@ set(SOURCE_FILES
     src/ChessBoard.cpp
     src/Square.cpp
     src/main.cpp
+
+    src/pieces/Piece.cpp
+    src/pieces/Knight.cpp
 )
 
 # Add the executable
