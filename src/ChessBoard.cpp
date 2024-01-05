@@ -3,6 +3,7 @@
 
 #include "ChessBoard.h"
 #include "Square.h"
+#include "pieces/Knight.h"
 
 ChessBoard::ChessBoard() {
     for (int i = 0; i < CHESSBOARD_SIZE; ++i) {
@@ -12,8 +13,9 @@ ChessBoard::ChessBoard() {
     }
 }
 
-void ChessBoard::initializeBoard() {
-    
+void ChessBoard::initialiseWithPieces() {
+    std::shared_ptr<Knight> knight = std::make_shared<Knight>(squares[0][1]);
+    squares[0][1]->placePiece(knight);
 }
 
 std::shared_ptr<Square> ChessBoard::getSquare(int row, int col) {

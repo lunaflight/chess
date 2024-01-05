@@ -15,3 +15,7 @@ bool Knight::canMoveTo(std::shared_ptr<Square> square) {
     const int colDiff = std::abs(colDest - colCurr);
     return (rowDiff == 1 && colDiff == 2) || (rowDiff == 2 && colDiff == 1);
 }
+
+std::string Knight::toString() {
+    return "K";
+}

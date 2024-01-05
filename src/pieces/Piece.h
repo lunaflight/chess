@@ -12,7 +12,7 @@ public:
     Piece(std::shared_ptr<Square> square);
     virtual bool canMoveTo(std::shared_ptr<Square> square) = 0;
 
-    friend std::ostream& operator<<(std::ostream& os, const Piece& piece);
+    virtual std::string toString() = 0;
 protected:
     std::shared_ptr<Square> square;
 };
