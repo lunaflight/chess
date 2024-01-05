@@ -13,7 +13,7 @@ ChessBoard::ChessBoard() {
     }
 }
 
-void ChessBoard::initialiseWithPieces() {
+void ChessBoard::initialise() {
     std::shared_ptr<Knight> knight = std::make_shared<Knight>(squares[0][1]);
     squares[0][1]->placePiece(knight);
 }
@@ -22,7 +22,7 @@ std::shared_ptr<Square> ChessBoard::getSquare(int row, int col) {
     return squares[row][col];
 }
 
-void ChessBoard::displayBoard() {
+void ChessBoard::display() {
     for (const auto &row : squares) {
         for (const std::shared_ptr<Square> &square : row) {
             std::cout << square->toString() << ' ';

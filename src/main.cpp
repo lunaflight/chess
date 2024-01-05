@@ -2,8 +2,8 @@
 
 int main() {
     ChessBoard chessBoard;
-    chessBoard.initialiseWithPieces();
-    chessBoard.displayBoard();
+    chessBoard.initialise();
+    chessBoard.display();
 
     // Add your game loop and other logic here
 

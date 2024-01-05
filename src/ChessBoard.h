@@ -11,8 +11,8 @@ constexpr int CHESSBOARD_SIZE = 8;
 class ChessBoard {
 public:
     ChessBoard();
-    void initialiseWithPieces();
-    void displayBoard();
+    void initialise();
+    void display();
     std::shared_ptr<Square> getSquare(int row, int col);
 
 private:
