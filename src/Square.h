@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "Piece.h"
+#include "pieces/Piece.h"
 #include <memory>
 
 class Square {
