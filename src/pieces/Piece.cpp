@@ -1,6 +1,6 @@
 #include <memory>
 #include "Piece.h"
+#include "Color.h"
+#include "../Square.h"
 
-class Square;
-
-Piece::Piece(std::shared_ptr<Square> square) : square(square) {}
+Piece::Piece(Color color, std::shared_ptr<Square> square) : color(color), square(square) {}

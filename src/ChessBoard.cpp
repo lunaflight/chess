@@ -14,7 +14,7 @@ ChessBoard::ChessBoard() {
 }
 
 void ChessBoard::initialise() {
-    std::shared_ptr<Knight> knight = std::make_shared<Knight>(squares[0][1]);
+    std::shared_ptr<Knight> knight = std::make_shared<Knight>(Color::Black, squares[0][1]);
     squares[0][1]->placePiece(knight);
 }
 

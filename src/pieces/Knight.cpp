@@ -1,9 +1,10 @@
 #include "Knight.h"
+#include "Color.h"
 #include "Piece.h"
 #include <cstdlib>
 #include <memory>
 
-Knight::Knight(std::shared_ptr<Square> square) : Piece(square) {}
+Knight::Knight(Color color, std::shared_ptr<Square> square) : Piece(color, square) {}
 
 bool Knight::canMoveTo(std::shared_ptr<Square> square) {
     const int rowDest = square->getRow();
